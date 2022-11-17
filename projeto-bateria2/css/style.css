@@ -1,0 +1,92 @@
+/* RESET DO CESS - PADRÃO GLOBAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+/* TRANSFORMANDO O PX EM REM */
+font-size: 62.5%;
+}
+/* DECLARANDO VARIÁVEIS NO CSS */
+html{
+    --title-color: #fff;
+    --base-color: #333;
+    --base-color-second: #00ff7f;
+}
+
+/* APLICANDO O FLEXBOX - CAIXA FLEXIVEL */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* FONTE DA BATERIA*/
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    /*DECLARANDO UMA VARIAVEL CSS */
+    background-color: var(--base-color);
+}
+/* TITULO DA PÁGINA */
+h1{
+    color: var(--title-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+/* APLICANDO CSS GRID - CAIXA PRINCIPAL */
+
+.keys{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+/* APLICANDO CSS GRID - CAIXA SECUNDARIA */
+.key{
+    width: 8rem;
+    height: 8rem;
+    border: 0.2rem solid var(--title-color);
+    color: var(--title-color);
+
+    /* aplicando flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3rem;
+    font-weight: bold;
+}
+/* .key.active{
+    VAMOS FAZER DEPOIS (LEMBRAR AO JHON)
+}*/
+
+.composer{
+    width: 26rem;
+    margin-top: 2rem;
+}
+
+/* CAIXA INPUT */
+.composer #input{
+    width: 100%;
+    outline: none;
+    font-size: 1.7rem;
+    padding: 1rem 1.5rem;
+}
+
+.composer button{
+    width: 100%;
+    height: 4rem;
+    background: none;
+    border: 0.2rem solid var(--title-color);
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: var(--title-color);
+    cursor: pointer;
+}
+.composer button:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+footer{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+}
